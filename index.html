@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaş Hesablama Proqramı</title>
+    <script>
+        window.onload = function() {
+            const userAge = prompt("Yaşınızı düz daxil elə: ");
+            const age = Number(userAge);
+            let message = "";
+
+            if (age >= 0 && age <= 20) {
+                message = "Uşaqsan";
+            } else if (age > 20 && age <= 35) {
+                message = "Dəliqanlı";
+            } else if (age > 35 && age <= 50) {
+                message = "Cavan";
+            } else if (age > 50 && age <= 65) {
+                message = "Qoca";
+            } else if (age > 65 && age <= 90) {
+                message = "Pensiya alan kaftar";
+            } else if (age > 90) {
+                message = "Ölmüsən qaqa";
+            }
+
+            document.getElementById("result").innerText = message;
+        };
+    </script>
+</head>
+<body>
+    <h1  style="text-align: center;">Yaşıva görə yaşayışın</h1>
+    <h2 id="result"  style="text-align: center;"></h2>
+</body>
+</html>
